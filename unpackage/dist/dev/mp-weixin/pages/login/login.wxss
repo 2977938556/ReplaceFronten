@@ -1,0 +1,256 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+page.data-v-e4e4508d {
+  background-color: #FFFFFF;
+}
+.page-container.data-v-e4e4508d {
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 0 64rpx;
+  justify-content: space-between;
+}
+
+/* Toast 提示 */
+.toast.data-v-e4e4508d {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 24rpx 48rpx;
+  border-radius: 60rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+  z-index: 1000;
+}
+.toast.visible.data-v-e4e4508d {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* 品牌区域 */
+.brand-section.data-v-e4e4508d {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 160rpx;
+}
+.app-logo.data-v-e4e4508d {
+  width: 192rpx;
+  height: 192rpx;
+  background: #111;
+  border-radius: 48rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 96rpx;
+  color: white;
+  box-shadow: 0 40rpx 80rpx rgba(0, 0, 0, 0.15);
+  margin-bottom: 48rpx;
+  animation: breathe-e4e4508d 4s ease-in-out infinite;
+}
+.app-name.data-v-e4e4508d {
+  font-size: 56rpx;
+  font-weight: 800;
+  color: #1D1D1F;
+  letter-spacing: -1px;
+  margin-bottom: 24rpx;
+}
+.app-slogan.data-v-e4e4508d {
+  font-size: 30rpx;
+  color: #8E8E93;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 480rpx;
+}
+
+/* 底部操作区 */
+.action-section.data-v-e4e4508d {
+  padding-bottom: 120rpx;
+}
+
+/* 微信登录按钮 */
+.wechat-login-btn.data-v-e4e4508d {
+  width: 100%;
+  height: 112rpx;
+  background: #07C160;
+  border-radius: 56rpx;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rpx;
+  box-shadow: 0 20rpx 40rpx rgba(7, 193, 96, 0.25);
+  transition: transform 0.1s, opacity 0.2s;
+}
+.wechat-login-btn.data-v-e4e4508d:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+.btn-content.data-v-e4e4508d {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  color: white;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.wechat-icon.data-v-e4e4508d {
+  width: 48rpx;
+  height: 48rpx;
+  flex-shrink: 0;
+}
+
+/* Loading 状态 */
+.loading-spinner.data-v-e4e4508d {
+  width: 40rpx;
+  height: 40rpx;
+  border: 4rpx solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin-e4e4508d 0.8s linear infinite;
+}
+
+/* 暂不登录 */
+.skip-btn.data-v-e4e4508d {
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #8E8E93;
+  padding: 20rpx;
+}
+
+/* 协议勾选区 */
+.agreement-box.data-v-e4e4508d {
+  margin-top: 48rpx;
+  display: flex;
+  align-items: flex-start;
+  gap: 16rpx;
+  justify-content: center;
+}
+.checkbox-wrapper.data-v-e4e4508d {
+  position: relative;
+  width: 36rpx;
+  height: 36rpx;
+  flex-shrink: 0;
+  margin-top: 4rpx;
+}
+.custom-checkbox.data-v-e4e4508d {
+  width: 100%;
+  height: 100%;
+  border: 3rpx solid #C7C7CC;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 选中状态 */
+.checkbox-wrapper.checked .custom-checkbox.data-v-e4e4508d {
+  background: #111;
+  border-color: #111;
+}
+.checkbox-wrapper.checked .custom-checkbox.data-v-e4e4508d::after {
+  content: "";
+  width: 16rpx;
+  height: 8rpx;
+  border-left: 4rpx solid white;
+  border-bottom: 4rpx solid white;
+  transform: rotate(-45deg) translate(2rpx, -2rpx);
+}
+
+/* 抖动动画 */
+.shake.data-v-e4e4508d {
+  animation: shake-e4e4508d 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.agreement-text.data-v-e4e4508d {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 1.5;
+  text-align: left;
+}
+.link.data-v-e4e4508d {
+  color: #576B95;
+  font-weight: 500;
+}
+
+/* 动画定义 */
+@keyframes fadeInDown-e4e4508d {
+from {
+    opacity: 0;
+    transform: translateY(-40rpx);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+@keyframes fadeInUp-e4e4508d {
+from {
+    opacity: 0;
+    transform: translateY(40rpx);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+@keyframes breathe-e4e4508d {
+0%, 100% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.03);
+}
+}
+@keyframes spin-e4e4508d {
+to {
+    transform: rotate(360deg);
+}
+}
+@keyframes shake-e4e4508d {
+10%, 90% {
+    transform: translate3d(-2rpx, 0, 0);
+}
+20%, 80% {
+    transform: translate3d(4rpx, 0, 0);
+}
+30%, 50%, 70% {
+    transform: translate3d(-8rpx, 0, 0);
+}
+40%, 60% {
+    transform: translate3d(8rpx, 0, 0);
+}
+}

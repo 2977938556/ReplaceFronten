@@ -1,0 +1,239 @@
+
+/* --- CSS 变量与基础重置 --- */
+.data-v-ca4e30fc:root {
+  --primary: #111111;
+  --surface: #FFFFFF;
+  --bg: #F5F7FA;
+  --text-main: #1D1D1F;
+  --text-sub: #8E8E93;
+}
+.page.data-v-ca4e30fc {
+  background-color: var(--bg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* --- 导航栏 --- */
+.nav-bar.data-v-ca4e30fc {
+  height: 44px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg);
+  z-index: 10;
+  flex-shrink: 0;
+}
+.nav-btn.data-v-ca4e30fc {
+  width: 36px; 
+  height: 36px;
+  border-radius: 50%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  background: rgba(0,0,0,0.03);
+}
+
+/* --- 纯CSS图标核心样式 --- */
+
+/* 1. 返回箭头 < */
+.icon-back.data-v-ca4e30fc {
+  width: 10px; 
+  height: 10px; 
+  border-left: 2.5px solid #1D1D1F; 
+  border-bottom: 2.5px solid #1D1D1F; 
+  /* 通过旋转 "L" 形得到 "<" */
+  transform: rotate(45deg); 
+  margin-right: 2px; /* 视觉微调 */
+}
+
+/* 2. 加号 + */
+.icon-plus.data-v-ca4e30fc {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.icon-plus.data-v-ca4e30fc::before,
+.icon-plus.data-v-ca4e30fc::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #A0A0A5;
+}
+.icon-plus.data-v-ca4e30fc::before { width: 14px; height: 2px;
+} /* 横向 - */
+.icon-plus.data-v-ca4e30fc::after { width: 2px; height: 14px;
+} /* 纵向 | */
+
+/* 3. 删除叉号 x */
+.icon-close.data-v-ca4e30fc {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-close.data-v-ca4e30fc::before,
+.icon-close.data-v-ca4e30fc::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* 两条线旋转45度形成X */
+.icon-close.data-v-ca4e30fc::before { transform: rotate(45deg);
+}
+.icon-close.data-v-ca4e30fc::after { transform: rotate(-45deg);
+}
+
+/* --- 页面其他样式 (保持不变) --- */
+.page-title.data-v-ca4e30fc {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+.scroll-content.data-v-ca4e30fc {
+  flex: 1;
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+.section-label.data-v-ca4e30fc {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  margin-top: 24px;
+  margin-left: 4px;
+}
+.section-label.data-v-ca4e30fc:first-child { margin-top: 0;
+}
+.type-group.data-v-ca4e30fc {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.type-chip.data-v-ca4e30fc {
+  flex: 1;
+  height: 44px;
+  background: var(--surface);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-sub);
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  border: 1px solid transparent;
+}
+.type-chip.active.data-v-ca4e30fc {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
+.input-card.data-v-ca4e30fc {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+  position: relative;
+  margin-bottom: 24px;
+}
+.feedback-textarea.data-v-ca4e30fc {
+  width: 100%;
+  min-height: 120px;
+  border: none; outline: none;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+.char-count.data-v-ca4e30fc {
+  position: absolute;
+  bottom: 12px; right: 16px;
+  font-size: 12px;
+  color: #C7C7CC;
+}
+.media-grid.data-v-ca4e30fc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.media-item.data-v-ca4e30fc, .add-btn.data-v-ca4e30fc {
+  width: calc((100% - 30px) / 4);
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #F2F4F7;
+  position: relative;
+}
+.media-img.data-v-ca4e30fc { width: 100%; height: 100%;
+}
+.delete-btn.data-v-ca4e30fc {
+  position: absolute;
+  top: 0; right: 0;
+  background: rgba(0,0,0,0.5);
+  border-bottom-left-radius: 12px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-btn.data-v-ca4e30fc {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  cursor: pointer;
+}
+.contact-input-box.data-v-ca4e30fc {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 0 20px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+}
+.contact-input.data-v-ca4e30fc {
+  width: 100%; border: none;
+  background: transparent;
+  font-size: 15px;
+  color: var(--text-main);
+}
+.input-placeholder.data-v-ca4e30fc { color: #C7C7CC;
+}
+.bottom-bar.data-v-ca4e30fc {
+  position: absolute; bottom: 0; left: 0; width: 100%;
+  padding: 20px 24px 20px 24px; 
+  background: linear-gradient(to top, rgba(245,247,250,1) 80%, rgba(245,247,250,0));
+  z-index: 100;
+}
+.submit-btn.data-v-ca4e30fc {
+  width: 100%; height: 56px;
+  background: var(--primary);
+  border-radius: 28px;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  display: flex; justify-content: center; align-items: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: opacity 0.2s;
+}
+.submit-btn.data-v-ca4e30fc::after { border: none;
+}
+.submit-btn.data-v-ca4e30fc:active { opacity: 0.8; transform: scale(0.98);
+}
+.submit-btn.disabled.data-v-ca4e30fc { background: #CCC; box-shadow: none; opacity: 1;
+}
+
